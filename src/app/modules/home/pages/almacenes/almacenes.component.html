@@ -1,0 +1,65 @@
+<div class="pb-5">
+    <h4>Configuración de Almacen</h4>
+    <hr size="4px" color="#003888"/>
+</div>
+
+<div>
+    <p>Almacen central</p>
+    <p>Libreta de Pasaportes</p>
+    <p>Disponibles</p>
+    <form>
+        <input type="text" class="text" placeholder="Cantidad">
+
+    </form>
+
+    <mat-card>
+        <mat-card-title>
+            Almacen central
+        </mat-card-title>
+    </mat-card>
+</div>
+
+<div class="container p-5">
+    <div class="row">
+        <div class="col">
+            <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8 table table-striped">
+                <ng-container matColumnDef="select">
+                    <th mat-header-cell *matHeaderCellDef>
+                      <mat-checkbox (change)="$event ? masterToggle() : null"
+                                    [checked]="selection.hasValue() && isAllSelected()"
+                                    [indeterminate]="selection.hasValue() && !isAllSelected()">
+                      </mat-checkbox>
+                      Activo
+                    </th>
+                    <td mat-cell *matCellDef="let row">
+                      <mat-checkbox (click)="$event.stopPropagation()"
+                                    (change)="$event ? selection.toggle(row) : null"
+                                    [checked]="selection.isSelected(row)">
+                      </mat-checkbox>
+                    </td>
+                  </ng-container>
+             
+              <!-- dependencia -->
+              <ng-container matColumnDef="dependencia">
+                <th mat-header-cell *matHeaderCellDef> Dependencia </th>
+                <td mat-cell *matCellDef="let element"> {{element.dependencia}} </td>
+              </ng-container>
+          
+              <!-- jefaturazonal -->
+              <ng-container matColumnDef="jefaturaZonal">
+                <th mat-header-cell *matHeaderCellDef> Jefatura Zonal </th>
+                <td mat-cell *matCellDef="let element"> {{element.jefaturaZonal}} </td>
+              </ng-container>
+                  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+              (click)="selection.toggle(row)"></tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                           showFirstLastButtons
+                           aria-label="Select page of periodic elements">
+            </mat-paginator>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+.mat-mdc-card {
+    padding: 0;
+  }
+  .mat-mdc-card-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin: 0;
+    padding: 15px;
+  }
+  .mat-mdc-card-actions {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px !important;
+  }
+  .mat-mdc-card-actions button {
+    margin-left: 8px !important;
+  }
+  .mat-mdc-card-content {
+    margin-bottom: 0;
+  }
+  .message {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #686666;
+    padding: 35px 50px;
+    overflow: hidden;
+  }
+  
+  mat-icon.mat-icon {
+    font-size: 3.5rem;
+    color: #BF0909;
+    overflow: inherit;
+    width: inherit;
+    height: inherit;
+    padding: 35px 0 0 0;
+  }
+  
+  mat-icon.mat-icon.sucess {
+    font-size: 3.5rem;
+    color: #198754;
+    overflow: inherit;
+    width: inherit;
+    height: inherit;
+    padding: 35px 0 0 0;
+  }
+  
+  mat-icon.mat-icon.warnning {
+    font-size: 3.5rem;
+    color: #d0a000;
+    overflow: inherit;
+    width: inherit;
+    height: inherit;
+    padding: 35px 0 0 0;
+  }

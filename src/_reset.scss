@@ -1,0 +1,18 @@
+* {
+  &:active,
+  :focus {
+    outline: none !important;
+  }
+}
+
+a:not(.mat-button-base):not(.mat-raised-button):not(.mat-fab):not(.mat-mini-fab):not([mat-list-item]) {
+  //color: #1DB0EF;
+}
+
+// Custom bootstrap
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>
+      {{dataDialog.title}}
+    </mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div [class.text-center]="!dataDialog.messageAlign || dataDialog.messageAlign === 'center'"
+           [class.text-justify]="dataDialog.messageAlign === 'justify'"
+           [class.text-right]="dataDialog.messageAlign === 'right'"
+           [class.text-left]="dataDialog.messageAlign === 'left'">
+        <mat-icon *ngIf="dataDialog.icon === null" fontSet="fas" fontIcon="fa-circle-exclamation" style="font-size: 3rem;"></mat-icon>
+        <mat-icon *ngIf="dataDialog.icon === 'sucess'" fontSet="fas" class="sucess" fontIcon="fa-circle-check" style="font-size: 3rem;"></mat-icon>
+        <mat-icon *ngIf="dataDialog.icon === 'warnning'" fontSet="fas" class="warnning" fontIcon="fa-triangle-exclamation" style="font-size: 3rem;"></mat-icon>
+        <div class="message" [innerHTML]="dataDialog.message"></div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button tabindex="-1" mat-stroked-button color="accent" (click)="cancel()">{{ dataDialog.textCancel ? dataDialog.textCancel : 'No' }}</button>
+      <button tabindex="-1" mat-flat-button color="accent" (click)="confirm()">{{ dataDialog.textConfirm ? dataDialog.textConfirm : 'Si' }}</button>
+    </mat-card-actions>
+  </mat-card>
+  

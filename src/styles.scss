@@ -1,0 +1,15 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/css/solid.min.css";
+@import 'material-icons/iconfont/material-icons.scss';
+@import "reset";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 1rem;
+}

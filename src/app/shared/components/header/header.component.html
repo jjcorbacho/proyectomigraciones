@@ -1,0 +1,51 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-toolbar color="primary">
+      <span>Menú</span>
+      <span class="espaciado"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a routerLink="sedes" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon class="icono">folder</mat-icon>
+        <span>Sedes y dependencias</span>
+      </a>
+    </mat-nav-list>
+
+    <mat-nav-list>
+      <a routerLink="alamacenes" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon class="icono">folder</mat-icon>
+        <span>Almacenes</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <img
+      src="assets/images/logosvg.svg"
+      alt="Logo de Migraciones"
+      height="60px"
+      width="auto"
+    />
+
+    <span class="espaciado"></span>
+
+    <mat-icon>assignment_ind</mat-icon><h4>Nombre y Apellido</h4>
+  </mat-toolbar>
+
+  <!-- Acá empieza el renderizado de las páginas  -->
+  <div class="container p-5">
+    <div class="row">
+      <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</mat-sidenav-container>
