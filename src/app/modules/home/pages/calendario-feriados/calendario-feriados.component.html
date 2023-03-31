@@ -1,0 +1,73 @@
+<div class="container pt-5 pb-2">
+  <div>
+    <h4>Configuración de Feriados</h4>
+    <hr size="4px" color="#003888" />
+  </div>
+</div>
+
+<mat-card class="container p-3 mb-2">
+  <mat-card-content>
+    <div class="container d-flex">
+      <div class="col-6">
+        <div class="div text-center align-items-center">
+          <mat-form-field appearance="fill">
+            <mat-label>Seleccionar tipo</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>Ninguno</mat-option>
+              <mat-option value="option1">Feriados Generales</mat-option>
+              <mat-option value="option2">Feriados particulares</mat-option>
+              <mat-option value="option2">otros</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <mat-checkbox class="example-margin"
+              >Jefatura Zonal Lima</mat-checkbox
+            >
+            <mat-checkbox class="example-margin"
+              >Jefatura Zonal Huancayo</mat-checkbox
+            >
+            <mat-checkbox class="example-margin"
+              >Jefatura Zonal Tumbes</mat-checkbox
+            >
+            <mat-checkbox class="example-margin"
+              >Jefatura Zonal Cusco</mat-checkbox
+            >
+            <mat-checkbox class="example-margin"
+              >Jefatura Zonal Arequipa</mat-checkbox
+            >
+            <mat-checkbox class="example-margin"
+              >Jefatura Zonal Trujillo</mat-checkbox
+            >
+          </div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="div flex">
+          <mat-card class="demo-inline-calendar-card">
+            <mat-calendar [(selected)]="selected"></mat-calendar>
+          </mat-card>
+          <p></p>
+        </div>
+
+        <div class="text-center align-items-center mt-4">
+          <section class="example-section">
+            <mat-checkbox class="example-margin">Feriado General</mat-checkbox>
+            <mat-checkbox class="example-margin"
+              >Feriado Particular</mat-checkbox
+            >
+          </section>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-actions class="flex">
+      <button mat-raised-button color="primary" class="mx-3">Añadir</button>
+      <button mat-raised-button color="warn">Eliminar</button>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>

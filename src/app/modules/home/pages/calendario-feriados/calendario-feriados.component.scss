@@ -1,0 +1,33 @@
+.demo-inline-calendar-card {
+    width: 300px;
+  }
+
+  .colores {
+    background-color: yellow;
+  }
+
+  .classic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid {
+    display: grid;
+    place-items: center;
+  }
+
+  .example-margin {
+    margin: 0 10px;
+  }
+
+  .example-section {
+    flex-direction: column;
+  }

@@ -16,12 +16,26 @@
     </mat-nav-list>
 
     <mat-nav-list>
-      <a routerLink="alamacenes" mat-list-item (click)="sidenav.toggle()">
+      <a routerLink="almacenes" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon class="icono">folder</mat-icon>
         <span>Almacenes</span>
       </a>
     </mat-nav-list>
-  </mat-sidenav>
+
+  <mat-nav-list>
+    <a routerLink="calendarioFeriados" mat-list-item (click)="sidenav.toggle()">
+      <mat-icon mat-list-icon class="icono">folder</mat-icon>
+      <span>Calendarios Feriados</span>
+    </a>
+  </mat-nav-list>
+
+<mat-nav-list>
+  <a routerLink="calendarioAtencion" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon class="icono">folder</mat-icon>
+    <span>Calendario Atención</span>
+  </a>
+</mat-nav-list>
+</mat-sidenav>
 
   <mat-toolbar color="primary">
     <button mat-icon-button (click)="sidenav.toggle()">

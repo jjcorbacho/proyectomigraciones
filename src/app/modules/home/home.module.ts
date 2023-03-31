@@ -9,12 +9,16 @@ import {AppMaterialModule} from "../../app-material.module";
 import { SedesComponent } from './pages/sedes/sedes.component';
 import { AlmacenesComponent } from './pages/almacenes/almacenes.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
+import { CalendarioFeriadosComponent } from './pages/calendario-feriados/calendario-feriados.component';
+import { CalendarioAtencionComponent } from './pages/calendario-atencion/calendario-atencion.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     SedesComponent,
-    AlmacenesComponent
+    AlmacenesComponent,
+    CalendarioFeriadosComponent,
+    CalendarioAtencionComponent
   ],
   imports: [
     CommonModule,
@@ -23,9 +27,5 @@ import { HeaderComponent } from 'src/app/shared/components/header/header.compone
     AppMaterialModule,
     SharedModule,
   ],
-
-  exports: [
-    SedesComponent,
-  ]
 })
 export class HomeModule { }
