@@ -1,45 +1,48 @@
-<div class="pb-5">
+<div class="container p-5">
+  <div>
     <h4>Configuración de Sedes y dependencias</h4>
     <hr size="4px" color="#003888"/>
+  </div>
 </div>
 
-<div class="container-fluid ps-5 ms-4">
-<div class="grid d-flex" style="--bs-columns: 3;">
-            <div class="p-2">
-                <div class="text-center pb-2">Jefatura Zonal</div>
-                <mat-form-field appearance="fill">
-                    <mat-label>Seleccionar</mat-label>
-                    <mat-select [(value)]="selected">
-                      <mat-option>Ninguno</mat-option>
-                      <mat-option value="option1">Lima</mat-option>
-                      <mat-option value="option2">Callao</mat-option>
-                      <mat-option value="option3">Tumbes</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-            </div>
-            <div class="p-2">
-                <div class="text-center pb-2">Dependencia</div>
-                <mat-form-field appearance="fill">
-                <mat-label>Seleccionar</mat-label>
-                <mat-select [(value)]="selected">
-                  <mat-option>Ninguno</mat-option>
-                  <mat-option value="option1">Lima</mat-option>
-                  <mat-option value="option2">Callao</mat-option>
-                  <mat-option value="option3">Tumbes</mat-option>
-                </mat-select>
-              </mat-form-field> 
-            </div>         
-        <div class="p-2 mt-4">
-            <mat-checkbox class="example-margin">Ver todos</mat-checkbox>
-            <button mat-raised-button color="primary" class="ms-2">Buscar</button>
-            <div class="ps-2 pt-2">
-                <button mat-raised-button color="primary">
-                    Añadir
-                </button>
-            </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-3 text-center">
+        <p>Jefatura Zonal</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccionar</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>Ninguno</mat-option>
+          <mat-option value="option1">Lima</mat-option>
+          <mat-option value="option2">Callao</mat-option>
+          <mat-option value="option3">Tumbes</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-</div>
+
+    <div class="col-3 text-center">
+        <p>Dependencia</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Seleccionar</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>Ninguno</mat-option>
+              <mat-option value="option1">Mac 1</mat-option>
+              <mat-option value="option2">Mac 2</mat-option>
+              <mat-option value="option3">Jockey Plaza</mat-option>
+              <mat-option value="option3">La Molina</mat-option>
+            </mat-select>
+          </mat-form-field> 
+    </div> 
+
+    <div class="col-4 text-center pb-4">
+        <mat-checkbox class="example-margin">Ver todos</mat-checkbox>
+        <button mat-raised-button color="primary" class="ms-2 mx-2">Buscar</button>
+        <button mat-raised-button color="primary">Añadir</button>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div> 
 
 <div class="container p-5">
     <div class="row">

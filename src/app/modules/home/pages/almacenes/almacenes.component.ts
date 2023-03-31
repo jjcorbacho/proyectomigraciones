@@ -12,7 +12,7 @@ export class AlmacenesComponent implements AfterViewInit {
   selected = '';
   showFiller = false;
 
-  displayedColumns: string[] = ['dependencia', 'jefaturaZonal', 'select'];
+  displayedColumns: string[] = ['jefaturaZonal', 'cantidadDeLibretas', 'notificar', 'select'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
 
@@ -38,16 +38,17 @@ export class AlmacenesComponent implements AfterViewInit {
 }
 
 export interface PeriodicElement {
-  dependencia: string;
   jefaturaZonal: string;
+  cantidadDeLibretas: string;
+  notificar: string
 
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { dependencia: 'Breña', jefaturaZonal: 'Lima'},
-  { dependencia: 'MAC 1', jefaturaZonal: 'Lima'},
-  { dependencia: 'MAC 2', jefaturaZonal: 'Lima'},
-  { dependencia: 'Jockey Plaza', jefaturaZonal: 'Lima'},
-  { dependencia: 'La Molina', jefaturaZonal: 'Lima'},
+  { jefaturaZonal: 'Lima', cantidadDeLibretas: '5800', notificar: '80%'},
+  { jefaturaZonal: 'Trujillo', cantidadDeLibretas: '1400', notificar: '90%'},
+  { jefaturaZonal: 'Arequipa', cantidadDeLibretas: '1200', notificar: '90%'},
+  { jefaturaZonal: 'Tumbes', cantidadDeLibretas: '1200', notificar: '90%'},
+  { jefaturaZonal: 'Huancayo', cantidadDeLibretas: '2500', notificar: '70%'},
 
 ];
