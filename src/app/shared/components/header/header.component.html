@@ -35,7 +35,39 @@
     <span>Calendario Atención</span>
   </a>
 </mat-nav-list>
+
+<mat-nav-list>
+  <a routerLink="capacidadOperativa" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon class="icono">folder</mat-icon>
+    <span>Capacidad Operativa</span>
+  </a>
+</mat-nav-list>
+
+<mat-nav-list>
+  <a routerLink="diaAcomulativo" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon class="icono">folder</mat-icon>
+    <span>Día Acumulativo</span>
+  </a>
+</mat-nav-list>
+
+<mat-nav-list>
+  <a routerLink="registroProgramacionCitas" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon class="icono">folder</mat-icon>
+    <span>Registro de Programación de Citas</span>
+  </a>
+</mat-nav-list>
+
+<mat-nav-list>
+  <a routerLink="publiacionDeCitas" mat-list-item (click)="sidenav.toggle()">
+    <mat-icon mat-list-icon class="icono">folder</mat-icon>
+    <span>Publicación de citas</span>
+  </a>
+</mat-nav-list>
+
+
 </mat-sidenav>
+
+
 
   <mat-toolbar color="primary">
     <button mat-icon-button (click)="sidenav.toggle()">

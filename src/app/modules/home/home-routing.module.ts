@@ -5,6 +5,10 @@ import { SedesComponent } from './pages/sedes/sedes.component';
 import { AlmacenesComponent } from './pages/almacenes/almacenes.component';
 import { CalendarioFeriadosComponent } from './pages/calendario-feriados/calendario-feriados.component';
 import { CalendarioAtencionComponent } from './pages/calendario-atencion/calendario-atencion.component';
+import { CapacidadOperativaComponent } from './pages/capacidad-operativa/capacidad-operativa.component';
+import { DiaAcomulativoComponent } from './pages/dia-acomulativo/dia-acomulativo.component';
+import { PublicacionDeCitasComponent } from '../citas/publicacion-de-citas/publicacion-de-citas.component';
+import { RegistroProgramacionCitasComponent } from '../citas/registro-programacion-citas/registro-programacion-citas.component';
 
 const routes: Routes = [
   // {
@@ -35,6 +39,22 @@ const routes: Routes = [
       {
         path: 'calendarioAtencion',
         component: CalendarioAtencionComponent,
+      },
+      {
+        path: 'capacidadOperativa',
+        component: CapacidadOperativaComponent,
+      },
+      {
+        path: 'diaAcomulativo',
+        component: DiaAcomulativoComponent,
+      },
+      {
+        path: 'registroProgramacionCitas',
+        component: RegistroProgramacionCitasComponent,
+      },
+      {
+        path: 'publiacionDeCitas',
+        component: PublicacionDeCitasComponent,
       }
     ]
   }

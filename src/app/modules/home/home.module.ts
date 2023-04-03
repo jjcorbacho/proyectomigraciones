@@ -11,6 +11,9 @@ import { AlmacenesComponent } from './pages/almacenes/almacenes.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { CalendarioFeriadosComponent } from './pages/calendario-feriados/calendario-feriados.component';
 import { CalendarioAtencionComponent } from './pages/calendario-atencion/calendario-atencion.component';
+import { CapacidadOperativaComponent } from './pages/capacidad-operativa/capacidad-operativa.component';
+import { DiaAcomulativoComponent } from './pages/dia-acomulativo/dia-acomulativo.component';
+import { ConfiguracionCalendarioAtencionComponent } from './components/configuracion-calendario-atencion/configuracion-calendario-atencion.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CalendarioAtencionComponent } from './pages/calendario-atencion/calenda
     SedesComponent,
     AlmacenesComponent,
     CalendarioFeriadosComponent,
-    CalendarioAtencionComponent
+    CalendarioAtencionComponent,
+    CapacidadOperativaComponent,
+    DiaAcomulativoComponent,
+    ConfiguracionCalendarioAtencionComponent
   ],
   imports: [
     CommonModule,
