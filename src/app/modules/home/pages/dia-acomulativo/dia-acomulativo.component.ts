@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {FormGroup, FormControl} from '@angular/forms';
+
 
 @Component({
   selector: 'app-dia-acomulativo',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dia-acomulativo.component.scss']
 })
 export class DiaAcomulativoComponent {
+
 
 }

@@ -1,1 +1,162 @@
-<p>registro-programacion-citas works!</p>
+<div class="container pt-5 pb-2">
+    <div>
+      <h4>Registro de programación de Citas</h4>
+      <hr size="4px" color="#003888" />
+    </div>
+  </div>
+
+  <mat-card class="container">
+    <mat-card-content>
+        <div class="row text-center align-items-center pt-3">
+            <div class="col">
+                <span class="px-4">Jefatura Zonal</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>Lima</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col">
+                <span class="px-4">Tipo de cita</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>Expedición de pasaporte</mat-label>
+                    <mat-select>
+                      <mat-option value="one">Programada</mat-option>
+                      <mat-option value="two">Por urgencia</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col">
+                <div class="titulolibretas">
+                    <p>Libretas Pasaportes en almacen:</p>
+                    <h4> 5800 </h4>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+
+  <h4 class="container mt-5">Asignación de Citas</h4>
+  <mat-card class="container">
+    <mat-card-content>
+        <div class="text-center">
+            Citas a programar 
+                <mat-form-field class="example-full-width px-2">
+                  <input matInput value="25">
+                </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <span class="px-4">Dependencia</span>
+                <mat-form-field appearance="fill">
+                    <mat-label>Breña</mat-label>
+                    <mat-select>
+                      <mat-option value="d1">MAC 1</mat-option>
+                      <mat-option value="d2">Jockey Plaza</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-6 d-flex align-items-center">
+                <div class="col-8">Citas a programar 
+                    <mat-form-field class="example-full-width px-2">
+                      <input matInput value="20">
+                    </mat-form-field></div>
+                <div class="col-4">
+                    <mat-checkbox>Liberar uso</mat-checkbox>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row align-items-center center">
+          <div class="col-1"></div>
+            <div class="col-6">
+              <div class="d-grid">
+                <mat-form-field appearance="fill" class="example-form-field">
+                  <mat-label>Ingrese rango de fechas</mat-label>
+                  <mat-date-range-input [formGroup]="range" [rangePicker]="rangePicker">
+                    <input matStartDate  formControlName="start" placeholder="Fecha de inicio">
+                    <input matEndDate  formControlName="end" placeholder="Fecha fin">
+                  </mat-date-range-input>
+                  <mat-hint>Fecha de inicio – Fecha fin</mat-hint>
+                  <mat-datepicker-toggle matIconSuffix [for]="rangePicker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #rangePicker>
+                    <mat-date-range-picker-actions #rangePicker>
+                      <button mat-button matDateRangePickerCancel>Cancelar</button>
+                      <button mat-raised-button color="primary" matDateRangePickerApply>Grabar</button>
+                    </mat-date-range-picker-actions>
+                  </mat-date-range-picker>
+                </mat-form-field>
+
+              </div>
+
+                
+
+            </div>
+            <div class="col-5">
+                <div class="d-grid col-8 mx-auto pb-4">
+                    <button mat-raised-button color="primary"><mat-icon>save</mat-icon>Distribuir citas</button>
+                  </div>
+            </div>
+                
+        </div>
+
+        <div class="row">
+
+          <div class="mat-elevation-z8 mt-5 mb-5">
+            <table mat-table [dataSource]="dataSource" class="table table-striped">
+          
+              <!-- Fecha Column -->
+              <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef> Breña </th>
+                <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+              </ng-container>
+          
+              <!-- citasProgramadas Column -->
+              <ng-container matColumnDef="citasProgramadas">
+                <th mat-header-cell *matHeaderCellDef> Citas Programadas </th>
+                <td mat-cell *matCellDef="let element"> {{element.citasProgramadas}} </td>
+              </ng-container>
+          
+              <!-- citasPublicadas Column -->
+              <ng-container matColumnDef="citasPublicadas">
+                <th mat-header-cell *matHeaderCellDef> Citas Publicadas </th>
+                <td mat-cell *matCellDef="let element"> {{element.citasPublicadas}} </td>
+              </ng-container>
+          
+              <!-- citasTomadas Column -->
+              <ng-container matColumnDef="citasTomadas">
+                <th mat-header-cell *matHeaderCellDef> Citas Tomadas </th>
+                <td mat-cell *matCellDef="let element"> {{element.citasTomadas}} </td>
+              </ng-container>
+
+              <!-- citasDistribuidas Column -->
+              <ng-container matColumnDef="citasDistribuidas">
+                <th mat-header-cell *matHeaderCellDef> Citas Distribuidas </th>
+                <td mat-cell *matCellDef="let element"> {{element.citasDistribuidas}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                           showFirstLastButtons
+                           aria-label="Select page of periodic elements">
+            </mat-paginator>
+          </div>
+          
+        </div>
+        
+        <div class="d-flex col-2 mx-auto pt-4 pb-2 align-items-center">
+          <mat-checkbox></mat-checkbox><button mat-raised-button color="primary">Ver detalle</button>
+        </div>
+        <div class="d-grid col-4 mx-auto pt-4 pb-2">
+          <button mat-raised-button color="accent"><mat-icon>save</mat-icon>Registrar programación</button>
+        </div>
+
+    </mat-card-content>
+  </mat-card>
+
