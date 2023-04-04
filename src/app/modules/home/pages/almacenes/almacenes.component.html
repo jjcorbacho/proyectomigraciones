@@ -22,8 +22,8 @@
                   <h3>Libretas Pasaportes</h3>
                   <h4>Disponibles</h4>
                   <h2>15250</h2>
-                  <button mat-raised-button color="warn" class="mx-2">
-                    Quitar
+                  <button mat-raised-button color="accent" class="mx-2" (click)="openDialog3('0ms', '0ms')">
+                    Distribuir
                   </button>
                 </div>
             </div>
@@ -35,10 +35,10 @@
                   <mat-icon matSuffix>description</mat-icon>
                 </mat-form-field>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary" class="mx-2">
+                    <button mat-raised-button color="primary" class="mx-2" (click)="openDialog2('0ms', '0ms')">
                       Añadir
                     </button>
-                    <button mat-raised-button color="warn" class="mx-2">
+                    <button mat-raised-button color="warn" class="mx-2" (click)="openDialog('0ms', '0ms')">
                       Quitar
                     </button>                  
                 </mat-card-actions>
@@ -121,3 +121,5 @@
     </div>
   </div>
 </div>
+
+

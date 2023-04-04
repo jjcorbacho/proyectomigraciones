@@ -7,7 +7,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AppMaterialModule} from "../../app-material.module";
 import { SedesComponent } from './pages/sedes/sedes.component';
-import { AlmacenesComponent } from './pages/almacenes/almacenes.component';
+import { AlmacenesComponent, DialogoAnadir, DialogoEliminar, Dialogodistribuir } from './pages/almacenes/almacenes.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { CalendarioFeriadosComponent } from './pages/calendario-feriados/calendario-feriados.component';
 import { CalendarioAtencionComponent } from './pages/calendario-atencion/calendario-atencion.component';
@@ -19,7 +19,7 @@ import { ConfiguracionCalendarioAtencionComponent } from './components/configura
   declarations: [
     DashboardComponent,
     SedesComponent,
-    AlmacenesComponent,
+    AlmacenesComponent, DialogoEliminar, DialogoAnadir, Dialogodistribuir,
     CalendarioFeriadosComponent,
     CalendarioAtencionComponent,
     CapacidadOperativaComponent,

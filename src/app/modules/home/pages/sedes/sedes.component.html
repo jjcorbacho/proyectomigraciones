@@ -12,25 +12,20 @@
         <p>Jefatura Zonal</p>
       <mat-form-field appearance="fill">
         <mat-label>Seleccionar</mat-label>
-        <mat-select [(value)]="selected">
-          <mat-option>Ninguno</mat-option>
-          <mat-option value="option1">Lima</mat-option>
-          <mat-option value="option2">Callao</mat-option>
-          <mat-option value="option3">Tumbes</mat-option>
+        <mat-select>
+          <mat-option *ngFor="let element of data" [value]="element.departamento">{{element.departamento}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
+
+
 
     <div class="col-3 text-center">
         <p>Dependencia</p>
           <mat-form-field appearance="fill">
             <mat-label>Seleccionar</mat-label>
-            <mat-select [(value)]="selected">
-              <mat-option>Ninguno</mat-option>
-              <mat-option value="option1">Mac 1</mat-option>
-              <mat-option value="option2">Mac 2</mat-option>
-              <mat-option value="option3">Jockey Plaza</mat-option>
-              <mat-option value="option3">La Molina</mat-option>
+            <mat-select>
+              <mat-option *ngFor="let element of data" [value]="element.dependencias">{{element.dependencias}}</mat-option>
             </mat-select>
           </mat-form-field> 
     </div> 

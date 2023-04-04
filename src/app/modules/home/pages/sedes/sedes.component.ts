@@ -3,13 +3,31 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table'
 
-
 @Component({
   selector: 'app-sedes',
   templateUrl: './sedes.component.html',
   styleUrls: ['./sedes.component.scss']
 })
 export class SedesComponent implements AfterViewInit {
+
+  sedesyDependencias = {
+    jefaturaZonal: {
+      departamento: 'Lima',
+      dependencias: ['Breña', 'La Molina', 'Jockey Plaza'],
+    },
+    jefaturaZonal1: {
+      departamento: 'Arequipa',
+      dependencias: ['MAC 1', 'Toro Bravo'],
+    },
+    jefaturaZonal2: {
+      departamento: 'Cusco',
+      dependencias: ['Aeropuerto', 'Municipalidad'],
+    }
+  }
+
+  data = Object.values(this.sedesyDependencias)
+
+
   selected = '';
   showFiller = false;
 
@@ -38,11 +56,15 @@ export class SedesComponent implements AfterViewInit {
 
 }
 
+
+
 export interface PeriodicElement {
+
   dependencia: string;
   jefaturaZonal: string;
 
 }
+
 
 const ELEMENT_DATA: PeriodicElement[] = [
   { dependencia: 'Breña', jefaturaZonal: 'Lima'},
@@ -52,3 +74,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { dependencia: 'La Molina', jefaturaZonal: 'Lima'},
 
 ];
+
+
+

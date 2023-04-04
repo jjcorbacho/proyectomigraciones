@@ -1,6 +1,8 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//import { FullCalendarModule } from '@fullcalendar/angular';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgxSpinnerModule} from "ngx-spinner";
@@ -15,10 +17,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+    //FullCalendarModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgxSpinnerModule,
     SharedModule,
+    
   ],
   exports: [NgxSpinnerModule],
   providers: [
