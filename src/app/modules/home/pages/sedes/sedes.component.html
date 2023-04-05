@@ -9,25 +9,13 @@
   <div class="row">
     <div class="col-1"></div>
     <div class="col-3 text-center">
-        <p>Jefatura Zonal</p>
-      <mat-form-field appearance="fill">
-        <mat-label>Seleccionar</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let element of data" [value]="element.departamento">{{element.departamento}}</mat-option>
-        </mat-select>
-      </mat-form-field>
+        <app-seleccion-jefaturas></app-seleccion-jefaturas>
     </div>
 
 
 
     <div class="col-3 text-center">
-        <p>Dependencia</p>
-          <mat-form-field appearance="fill">
-            <mat-label>Seleccionar</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let element of data" [value]="element.dependencias">{{element.dependencias}}</mat-option>
-            </mat-select>
-          </mat-form-field> 
+        <app-seleccion-dependencias></app-seleccion-dependencias>
     </div> 
 
     <div class="col-4 text-center pb-4">

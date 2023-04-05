@@ -5,12 +5,17 @@ import {RouterModule} from "@angular/router";
 import { AlertComponent } from './components/alert/alert.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SeleccionJefaturasComponent } from './components/seleccion-jefaturas/seleccion-jefaturas.component';
+import { SeleccionDependenciasComponent } from './components/seleccion-dependencias/seleccion-dependencias.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
     AlertComponent,
     ConfirmationComponent,
-    HeaderComponent
+    HeaderComponent,
+    SeleccionJefaturasComponent,
+    SeleccionDependenciasComponent
   ],
   imports: [
     CommonModule,
@@ -20,8 +25,14 @@ import { HeaderComponent } from './components/header/header.component';
   exports: [
     HeaderComponent,
     AlertComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    SeleccionJefaturasComponent,
+    SeleccionDependenciasComponent
 
+  ],
+
+  providers: [
+    DataService
   ]
 })
 export class SharedModule { }

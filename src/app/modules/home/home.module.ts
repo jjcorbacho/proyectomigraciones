@@ -7,24 +7,28 @@ import {SharedModule} from "../../shared/shared.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AppMaterialModule} from "../../app-material.module";
 import { SedesComponent } from './pages/sedes/sedes.component';
-import { AlmacenesComponent, DialogoAnadir, DialogoEliminar, Dialogodistribuir } from './pages/almacenes/almacenes.component';
+import { AlmacenesComponent,} from './pages/almacenes/almacenes.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { CalendarioFeriadosComponent } from './pages/calendario-feriados/calendario-feriados.component';
 import { CalendarioAtencionComponent } from './pages/calendario-atencion/calendario-atencion.component';
 import { CapacidadOperativaComponent } from './pages/capacidad-operativa/capacidad-operativa.component';
 import { DiaAcomulativoComponent } from './pages/dia-acomulativo/dia-acomulativo.component';
 import { ConfiguracionCalendarioAtencionComponent } from './components/configuracion-calendario-atencion/configuracion-calendario-atencion.component';
+import { AlmacenCentralComponent, DialogoAnadir, DialogoEliminar, Dialogodistribuir } from './pages/components/almacen-central/almacen-central.component';
+import { AlmacenSecundarioComponent } from './pages/components/almacen-secundario/almacen-secundario.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     SedesComponent,
-    AlmacenesComponent, DialogoEliminar, DialogoAnadir, Dialogodistribuir,
+    AlmacenesComponent,
     CalendarioFeriadosComponent,
     CalendarioAtencionComponent,
     CapacidadOperativaComponent,
     DiaAcomulativoComponent,
-    ConfiguracionCalendarioAtencionComponent
+    ConfiguracionCalendarioAtencionComponent,
+    AlmacenCentralComponent, DialogoEliminar, DialogoAnadir, Dialogodistribuir,
+    AlmacenSecundarioComponent,
   ],
   imports: [
     CommonModule,

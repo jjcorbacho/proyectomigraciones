@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col">
+        <h4>Almacen Central</h4>
+        <mat-card>
+            <div class="row align-items-center">
+              <div class="col-6 d-flex align-items-center">
+                  <div class="col-6">
+                    <mat-card-content>
+                      <img mat-card-xl-image src="assets/images/libreta.png" />
+                    </mat-card-content>
+                  </div>
+                  <div class="col text-center">
+                    <h3>Libretas Pasaportes</h3>
+                    <h4>Disponibles</h4>
+                    <h2>15250</h2>
+                    <button mat-raised-button color="accent" class="mx-2" (click)="openDialog3('0ms', '0ms')">
+                      Distribuir
+                    </button>
+                  </div>
+              </div>
+              <div class="col-6">
+                <mat-card-content>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Cantidad de libretas</mat-label>
+                    <input matInput placeholder="Cantidad" />
+                    <mat-icon matSuffix>description</mat-icon>
+                  </mat-form-field>
+                  <mat-card-actions>
+                      <button mat-raised-button color="primary" class="mx-2" (click)="openDialog2('0ms', '0ms')">
+                        Añadir
+                      </button>
+                      <button mat-raised-button color="warn" class="mx-2" (click)="openDialog('0ms', '0ms')">
+                        Quitar
+                      </button>                  
+                  </mat-card-actions>
+                </mat-card-content>
+              </div>
+            </div>
+        </mat-card>
+      </div>
+  
+      <div class="col-1"></div>
+    </div>
+  </div>

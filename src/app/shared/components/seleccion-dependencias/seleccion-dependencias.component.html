@@ -1,0 +1,11 @@
+<span class="px-2">Dependencias</span>
+<mat-form-field appearance="fill" class="pt-2">
+  <mat-label>Seleccionar</mat-label>
+  <mat-select>
+    <mat-option 
+        name="jefaturaZonal"
+        *ngFor="let oficina of oficinas"
+        [value]="oficina.jefaturaZonal">{{oficina.dependencia}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

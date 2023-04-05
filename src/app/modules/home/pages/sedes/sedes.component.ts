@@ -1,5 +1,5 @@
 import { SelectionModel } from '@angular/cdk/collections';
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ViewChild, Input} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table'
 
@@ -10,26 +10,7 @@ import {MatTableDataSource} from '@angular/material/table'
 })
 export class SedesComponent implements AfterViewInit {
 
-  sedesyDependencias = {
-    jefaturaZonal: {
-      departamento: 'Lima',
-      dependencias: ['Breña', 'La Molina', 'Jockey Plaza'],
-    },
-    jefaturaZonal1: {
-      departamento: 'Arequipa',
-      dependencias: ['MAC 1', 'Toro Bravo'],
-    },
-    jefaturaZonal2: {
-      departamento: 'Cusco',
-      dependencias: ['Aeropuerto', 'Municipalidad'],
-    }
-  }
-
-  data = Object.values(this.sedesyDependencias)
-
-
-  selected = '';
-  showFiller = false;
+  @Input() oficinas: any[] = []; 
 
   displayedColumns: string[] = ['dependencia', 'jefaturaZonal', 'select'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -55,7 +36,6 @@ export class SedesComponent implements AfterViewInit {
   }
 
 }
-
 
 
 export interface PeriodicElement {
