@@ -5,7 +5,10 @@
     <mat-option 
         name="jefaturaZonal"
         *ngFor="let oficina of oficinas"
-        [value]="oficina.jefaturaZonal">{{oficina.jefaturaZonal}}
+        [value]="oficina.jefaturaZonal"
+        (click)="agregar"
+        >
+        {{oficina.jefaturaZonal}}
     </mat-option>
   </mat-select>
 </mat-form-field>

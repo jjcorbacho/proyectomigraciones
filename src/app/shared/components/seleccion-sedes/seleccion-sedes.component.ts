@@ -1,17 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { DataService } from '../../services/data.service';
+import { Component } from '@angular/core';
 import { JefaturasyDependencias } from '../../services/interfaces/data.interface';
-
+import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-seleccion-jefaturas',
-  templateUrl: './seleccion-jefaturas.component.html',
-  styleUrls: ['./seleccion-jefaturas.component.scss']
+  selector: 'app-seleccion-sedes',
+  templateUrl: './seleccion-sedes.component.html',
+  styleUrls: ['./seleccion-sedes.component.scss']
 })
-
-
-export class SeleccionJefaturasComponent {
-
+export class SeleccionSedesComponent {
   jefaturasyDependencias: JefaturasyDependencias = {
     jefaturaZonal: '',
     dependencia: '',

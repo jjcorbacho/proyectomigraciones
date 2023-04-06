@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { SeleccionJefaturasComponent } from './components/seleccion-jefaturas/seleccion-jefaturas.component';
 import { SeleccionDependenciasComponent } from './components/seleccion-dependencias/seleccion-dependencias.component';
 import { DataService } from './services/data.service';
+import { SeleccionSedesComponent } from './components/seleccion-sedes/seleccion-sedes.component';
+import { BotonAgregarComponent } from './components/boton-agregar/boton-agregar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { DataService } from './services/data.service';
     ConfirmationComponent,
     HeaderComponent,
     SeleccionJefaturasComponent,
-    SeleccionDependenciasComponent
+    SeleccionDependenciasComponent,
+    SeleccionSedesComponent,
+    BotonAgregarComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +31,9 @@ import { DataService } from './services/data.service';
     AlertComponent,
     ConfirmationComponent,
     SeleccionJefaturasComponent,
-    SeleccionDependenciasComponent
+    SeleccionDependenciasComponent,
+    SeleccionSedesComponent,
+    BotonAgregarComponent
 
   ],
 

@@ -1,0 +1,43 @@
+<mat-card class="container col-8">
+    <mat-card-content class="row d-flex">
+      <div class="col-4 text-center">
+        <span class="px-2">Jefatura Zonal</span>
+        <mat-form-field appearance="fill" class="pt-2">
+          <mat-label>Seleccionar</mat-label>
+          <mat-select>
+            <mat-option 
+                name="jefaturaZonal"
+                *ngFor="let oficina of oficinas"
+                [value]="oficina.jefaturaZonal"
+                (click)="agregar"
+                >
+                {{oficina.jefaturaZonal}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-4 text-center">
+        <span class="px-2">Dependencias</span>
+        <mat-form-field appearance="fill" class="pt-2">
+          <mat-label>Seleccionar</mat-label>
+          <mat-select>
+            <mat-option 
+                name="jefaturaZonal"
+                *ngFor="let oficina of oficinas"
+                [value]="oficina.jefaturaZonal">{{oficina.dependencia}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div> 
+      <div class="col-4 text-center pb-4">
+          <mat-checkbox checked="checked" class="example-margin">Ver todos</mat-checkbox>
+          <button mat-raised-button color="primary" class="ms-2 mx-2">Buscar</button>
+          <button mat-raised-button color="primary">Añadir</button>
+      </div>
+    </mat-card-content>
+  </mat-card> 
+
+
+
+
+

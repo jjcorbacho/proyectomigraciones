@@ -2,70 +2,42 @@
     <div class="row">
       <div class="col">
         <h4>Almacenes secundarios</h4>
-        <table
-          mat-table
-          [dataSource]="dataSource"
-          class="mat-elevation-z8 table table-striped"
-        >
-          <ng-container matColumnDef="select">
-            <th mat-header-cell *matHeaderCellDef>
-              <mat-checkbox
-                (change)="$event ? masterToggle() : null"
-                [checked]="selection.hasValue() && isAllSelected()"
-                [indeterminate]="selection.hasValue() && !isAllSelected()"
-              >
-              </mat-checkbox>
-              Activo
-            </th>
-            <td mat-cell *matCellDef="let row">
-              <mat-checkbox
-                (click)="$event.stopPropagation()"
-                (change)="$event ? selection.toggle(row) : null"
-                [checked]="selection.isSelected(row)"
-              >
-              </mat-checkbox>
-            </td>
-          </ng-container>
-  
-          <!-- jefatura Zonal -->
-          <ng-container matColumnDef="jefaturaZonal">
-            <th mat-header-cell *matHeaderCellDef>Jefatura Zonal</th>
-            <td mat-cell *matCellDef="let element">{{ element.jefaturaZonal }}</td>
-          </ng-container>
-  
-          <!-- Cantidad de libretas -->
-          <ng-container matColumnDef="cantidadDeLibretas">
-            <th mat-header-cell *matHeaderCellDef>Cantidad de libretas</th>
-            <td mat-cell *matCellDef="let element">
-              {{ element.cantidadDeLibretas }}
-            </td>
-          </ng-container>
-  
-          <!-- Notificar -->
-          <ng-container matColumnDef="notificar">
-            <th mat-header-cell *matHeaderCellDef>Notificar</th>
-            <td mat-cell *matCellDef="let element">
-              {{ element.notificar }}
-            </td>
-          </ng-container>
-  
-  
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr
-            mat-row
-            *matRowDef="let row; columns: displayedColumns"
-            (click)="selection.toggle(row)"
-          ></tr>
-        </table>
-  
-        <mat-paginator
-          [pageSizeOptions]="[5, 10, 20]"
-          showFirstLastButtons
-          aria-label="Select page of periodic elements"
-        >
-        </mat-paginator>
-      </div>
-    </div>
-  </div>
 
-<app-seleccion-jefaturas></app-seleccion-jefaturas>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="jefaturaZonal">
+      <mat-header-cell *matHeaderCellDef> Jefatura Zonal </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.jefaturaZonal}} </mat-cell>
+    </ng-container>
+  
+    <!-- Dependencia -->
+    <ng-container matColumnDef="dependencia">
+      <mat-header-cell *matHeaderCellDef> Dependencia </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.dependencia}} </mat-cell>
+    </ng-container>
+  
+    <!-- Cantidad de libretas -->
+    <ng-container matColumnDef="cantidadDeLibretas">
+      <mat-header-cell *matHeaderCellDef> Cantidad de Libretas </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cantidadDeLibretas | number}} </mat-cell>
+    </ng-container>
+  
+    <!-- Porcentaje -->
+    <ng-container matColumnDef="porcentajedeLibretas">
+      <mat-header-cell *matHeaderCellDef> Porcentaje </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.porcentajedeLibretas | percent }} </mat-cell>
+    </ng-container>
+
+    <!-- Activo -->
+    <ng-container matColumnDef="activo">
+      <mat-header-cell *matHeaderCellDef> Activo </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.activo}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+        
+
+        

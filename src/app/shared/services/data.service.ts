@@ -9,21 +9,21 @@ export class DataService {
           jefaturaZonal: 'Lima',
           dependencia: 'Breña',
           cantidadDeLibretas: 100,
-          porcentajedeLibretas: 100,
+          porcentajedeLibretas: 1,
           activo: true, 
         },
         {
           jefaturaZonal: 'Arequipa',
           dependencia: 'MAC 1',
           cantidadDeLibretas: 100,
-          porcentajedeLibretas: 100,
-          activo: true, 
+          porcentajedeLibretas: 0.56,
+          activo: false, 
         },
         {
           jefaturaZonal: 'Cusco',
           dependencia: 'MAC 2',
           cantidadDeLibretas: 100,
-          porcentajedeLibretas: 100,
+          porcentajedeLibretas: 0.8,
           activo: true, 
         }
       ];
@@ -35,5 +35,5 @@ export class DataService {
       agregar( oficinas: JefaturasyDependencias) {
         this._oficinas.push(oficinas);
       }
-    
+
 }
