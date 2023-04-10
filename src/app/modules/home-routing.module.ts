@@ -1,14 +1,14 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {DashboardComponent} from "./pages/dashboard/dashboard.component";
-import { SedesComponent } from './pages/sedes/sedes.component';
-import { AlmacenesComponent } from './pages/almacenes/almacenes.component';
-import { CalendarioFeriadosComponent } from './pages/calendario-feriados/calendario-feriados.component';
-import { CalendarioAtencionComponent } from './pages/calendario-atencion/calendario-atencion.component';
-import { CapacidadOperativaComponent } from './pages/capacidad-operativa/capacidad-operativa.component';
-import { DiaAcomulativoComponent } from './pages/dia-acomulativo/dia-acomulativo.component';
-import { PublicacionDeCitasComponent } from '../citas/publicacion-de-citas/publicacion-de-citas.component';
-import { RegistroProgramacionCitasComponent } from '../citas/registro-programacion-citas/registro-programacion-citas.component';
+import { HomeComponent} from "../core/home/home.component";
+import { SedesComponent } from '../core/sedes/sedes.component';
+import { AlmacenesComponent } from '../core/almacenes/almacenes.component';
+import { CalendarioFeriadosComponent } from '../core/calendario-feriados/calendario-feriados.component';
+import { CalendarioAtencionComponent } from '../core/calendario-atencion/calendario-atencion.component';
+import { CapacidadOperativaComponent } from '../core/capacidad-operativa/capacidad-operativa.component';
+import { DiaAcomulativoComponent } from '../core/dia-acomulativo/dia-acomulativo.component';
+import { PublicacionDeCitasComponent } from '../core/publicacion-de-citas/publicacion-de-citas.component';
+import { RegistroProgramacionCitasComponent } from '../core/registro-programacion-citas/registro-programacion-citas.component';
 
 const routes: Routes = [
   // {
@@ -22,7 +22,7 @@ const routes: Routes = [
 
   {
     path: '',
-    component: DashboardComponent,
+    component: HomeComponent,
     children: [
       {
         path: 'sedes',
