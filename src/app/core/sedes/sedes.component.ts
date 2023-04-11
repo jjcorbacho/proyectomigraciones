@@ -10,8 +10,9 @@ import { SelectionModel } from '@angular/cdk/collections';
 })
 
 export class SedesComponent {
+
   displayedColumns: string[] = ['jefaturaZonal', 'dependencia', 'activo'];
-  dataSource = this.oficinas;
+  dataSource = this.oficinas
 
   get oficinas(): JefaturasyDependencias[] {
     return this.DataService.oficinas

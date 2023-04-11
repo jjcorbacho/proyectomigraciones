@@ -10,6 +10,10 @@ import { SeleccionDependenciasComponent } from './components/seleccion-dependenc
 import { DataService } from './services/data.service';
 import { SeleccionSedesComponent } from './components/seleccion-sedes/seleccion-sedes.component';
 import { BotonAgregarComponent } from './components/boton-agregar/boton-agregar.component';
+import { SelectorComponent } from './components/selector/selector.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,15 @@ import { BotonAgregarComponent } from './components/boton-agregar/boton-agregar.
     SeleccionJefaturasComponent,
     SeleccionDependenciasComponent,
     SeleccionSedesComponent,
-    BotonAgregarComponent
+    BotonAgregarComponent,
+    SelectorComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     AppMaterialModule,
+    ReactiveFormsModule,
+    
   ],
   exports: [
     HeaderComponent,
@@ -33,7 +40,8 @@ import { BotonAgregarComponent } from './components/boton-agregar/boton-agregar.
     SeleccionJefaturasComponent,
     SeleccionDependenciasComponent,
     SeleccionSedesComponent,
-    BotonAgregarComponent
+    BotonAgregarComponent,
+    SelectorComponent
 
   ],
 

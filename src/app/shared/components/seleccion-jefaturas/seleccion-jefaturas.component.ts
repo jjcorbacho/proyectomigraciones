@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DataService } from '../../services/data.service';
-import { JefaturasyDependencias } from '../../services/interfaces/data.interface';
+import { Jefaturas, JefaturasyDependencias } from '../../services/interfaces/data.interface';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -11,24 +12,17 @@ import { JefaturasyDependencias } from '../../services/interfaces/data.interface
 
 
 export class SeleccionJefaturasComponent {
+  
+  jefaturas: Jefaturas[] = [];
+  form!: FormGroup;
+  constructor(private formBuilder: FormBuilder, private dataService: DataService) { }
 
-  jefaturasyDependencias: JefaturasyDependencias = {
-    jefaturaZonal: '',
-    dependencia: '',
-    cantidadDeLibretas: 0,
-    porcentajedeLibretas: 0,
-    activo: false, 
-  }
-
-  get oficinas(): JefaturasyDependencias[] {
-    return this.DataService.oficinas
-  }
-
-  constructor (private DataService: DataService) {
-  }
-
-  agregar() {
-    this.DataService.agregar(this.jefaturasyDependencias)
+  ngOnInit() {
+    this.jefaturas = this.dataService.fetchCategories();
+    this.form = this.formBuilder.group({
+      categoryId: [],
+      productId: []
+    }); 
   }
 
 }

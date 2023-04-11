@@ -2,13 +2,7 @@
 <mat-form-field appearance="fill" class="pt-2">
   <mat-label>Seleccionar</mat-label>
   <mat-select>
-    <mat-option 
-        name="jefaturaZonal"
-        *ngFor="let oficina of oficinas"
-        [value]="oficina.jefaturaZonal"
-        (click)="agregar"
-        >
-        {{oficina.jefaturaZonal}}
+    <mat-option *ngFor="let jefaturas of jefaturas"[value]="jefaturas.id">{{ jefaturas.name }}
     </mat-option>
   </mat-select>
 </mat-form-field>
