@@ -3,7 +3,7 @@
     <mat-toolbar color="primary">
       <span>Menú</span>
       <span class="espaciado"></span>
-      <button mat-icon-button (click)="sidenav.toggle()">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true">
         <mat-icon>menu</mat-icon>
       </button>
     </mat-toolbar>
@@ -78,10 +78,15 @@
     />
 
     <span class="espaciado"></span>
+    <button mat-icon-button class="button-logout" routerLink="/">
+              <mat-icon fontSet="fas" fontIcon="fa-power-off"></mat-icon>
+            </button>
+    <a mat-button class="menu-user" routerLink="/inicio/home">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
 
     <mat-icon>assignment_ind</mat-icon><h4>Nombre y Apellido</h4>
   </mat-toolbar>
-
-  <!-- Acá empieza el renderizado de las páginas  -->
-        <router-outlet></router-outlet>
+           <router-outlet></router-outlet>
 </mat-sidenav-container>

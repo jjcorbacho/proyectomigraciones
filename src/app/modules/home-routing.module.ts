@@ -10,6 +10,7 @@ import { DiaAcomulativoComponent } from '../core/dia-acomulativo/dia-acomulativo
 import { PublicacionDeCitasComponent } from '../core/publicacion-de-citas/publicacion-de-citas.component';
 import { RegistroProgramacionCitasComponent } from '../core/registro-programacion-citas/registro-programacion-citas.component';
 import { LoginComponent } from '../shared/components/login/login.component';
+import { InicioComponent } from '../core/inicio/inicio.component';
 
 const routes: Routes = [
   // {
@@ -24,11 +25,15 @@ const routes: Routes = [
     path: '',
     component: LoginComponent,
   },
-
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'inicio',
+    component: InicioComponent,
     children: [
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+      
       {
         path: 'sedes',
         component: SedesComponent,

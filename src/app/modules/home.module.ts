@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from '../core/home/home.component';
-import {SharedModule} from "../shared/shared.module";
-import {ReactiveFormsModule} from "@angular/forms";
-import {AppMaterialModule} from "../app-material.module";
+import { SharedModule } from "../shared/shared.module";
+import { ReactiveFormsModule } from "@angular/forms";
+import { AppMaterialModule } from "../app-material.module";
 import { SedesComponent } from '../core/sedes/sedes.component';
 import { AlmacenesComponent,} from '../core/almacenes/almacenes.component';
 import { CalendarioFeriadosComponent } from '../core/calendario-feriados/calendario-feriados.component';
@@ -16,6 +16,7 @@ import { AlmacenCentralComponent, DialogoAnadir, DialogoEliminar, Dialogodistrib
 import { AlmacenSecundarioComponent } from '../core/almacen-secundario/almacen-secundario.component';
 import { RegistroProgramacionCitasComponent } from '../core/registro-programacion-citas/registro-programacion-citas.component';
 import { PublicacionDeCitasComponent } from '../core/publicacion-de-citas/publicacion-de-citas.component';
+import { InicioComponent } from '../core/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PublicacionDeCitasComponent } from '../core/publicacion-de-citas/public
     AlmacenCentralComponent, DialogoEliminar, DialogoAnadir, Dialogodistribuir,
     AlmacenSecundarioComponent,
     RegistroProgramacionCitasComponent,
-    PublicacionDeCitasComponent
+    PublicacionDeCitasComponent,
+    InicioComponent
   ],
   imports: [
     CommonModule,

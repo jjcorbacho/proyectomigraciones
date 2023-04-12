@@ -23,11 +23,7 @@ export class LoginComponent {
 
 
 
-  constructor (public dialog: MatDialog, public route: Router) {}
-
-  Login() : void {
-   this.route.navigate(['./home'])
-  }
+  constructor (public dialog: MatDialog) {}
 
   alert(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(AlertModalComponent, {

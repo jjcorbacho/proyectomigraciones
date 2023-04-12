@@ -12,8 +12,6 @@ import { SeleccionSedesComponent } from './components/seleccion-sedes/seleccion-
 import { BotonAgregarComponent } from './components/boton-agregar/boton-agregar.component';
 import { SelectorComponent } from './components/selector/selector.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent, AlertModalComponent } from './components/login/login.component';
 
 @NgModule({
@@ -27,7 +25,8 @@ import { LoginComponent, AlertModalComponent } from './components/login/login.co
     BotonAgregarComponent,
     SelectorComponent,
     LoginComponent,
-    AlertModalComponent
+    AlertModalComponent,
+
   ],
   imports: [
     CommonModule,
@@ -46,7 +45,8 @@ import { LoginComponent, AlertModalComponent } from './components/login/login.co
     BotonAgregarComponent,
     SelectorComponent,
     LoginComponent,
-    AlertModalComponent
+    AlertModalComponent,
+    
 
   ],
 
