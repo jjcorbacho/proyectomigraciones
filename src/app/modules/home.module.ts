@@ -38,5 +38,6 @@ import { PublicacionDeCitasComponent } from '../core/publicacion-de-citas/public
     AppMaterialModule,
     SharedModule,
   ],
+
 })
 export class HomeModule { }

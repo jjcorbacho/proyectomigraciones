@@ -22,7 +22,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatStepperModule} from '@angular/material/stepper';
-import {MatGridListModule} from '@angular/material/grid-list';
+import {MatGridListModule, MatGridTile} from '@angular/material/grid-list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -63,6 +63,7 @@ import {getEspPaginatorIntl} from "./shared/helpers/esp-paginator-intl";
     MatProgressBarModule,
     MatStepperModule,
     MatGridListModule,
+  
     MatButtonToggleModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,
@@ -99,6 +100,7 @@ import {getEspPaginatorIntl} from "./shared/helpers/esp-paginator-intl";
     MatStepperModule,
     MatBottomSheetModule,
     MatGridListModule,
+    MatGridTile,
     MatButtonToggleModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,

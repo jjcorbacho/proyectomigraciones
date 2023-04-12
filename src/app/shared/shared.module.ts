@@ -14,6 +14,7 @@ import { SelectorComponent } from './components/selector/selector.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent, AlertModalComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SeleccionDependenciasComponent,
     SeleccionSedesComponent,
     BotonAgregarComponent,
-    SelectorComponent
+    SelectorComponent,
+    LoginComponent,
+    AlertModalComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SeleccionDependenciasComponent,
     SeleccionSedesComponent,
     BotonAgregarComponent,
-    SelectorComponent
+    SelectorComponent,
+    LoginComponent,
+    AlertModalComponent
 
   ],
 

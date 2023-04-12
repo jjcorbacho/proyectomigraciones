@@ -1,0 +1,55 @@
+<div class="container text-center centrado">
+  <div class="row">
+    <h1 class="h5 mb-3">Ingrese sus datos</h1>
+
+    <mat-card class="pb-5 pt-3 matlogin">
+      <img
+        src="assets/images/logosvg.svg"
+        alt="Logo de Migraciones"
+        height="100px"
+        width="auto"
+        class="pb-3"
+      />
+
+      <span class="pb-3">Bienvenido al<br>Centro de Gestor de Citas</span>
+      <mat-card-content>
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese su correo</mat-label>
+          <input
+            matInput
+            placeholder="usuario@migraciones.gob.pe"
+            [formControl]="email"
+            required
+            class="inputpass"
+          />
+          <mat-icon matSuffix>mail</mat-icon>
+          <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese su contraseña</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" />
+          <button
+            matIconSuffix
+            mat-icon-button
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+            class="inputpass"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </mat-card-content>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="Login()"
+        class="mb-3 mt-3 loginbtn"
+      >
+        Ingresar
+      </button>
+      <button mat-button class="btncuenta" (click)="alert ('0ms', '0ms')">¿Perdiste tu clave?</button>
+      <button mat-button class="btncuenta">¿No tienes cuenta?</button>>
+    </mat-card>
+  </div>
+</div>

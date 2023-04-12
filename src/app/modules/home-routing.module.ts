@@ -9,6 +9,7 @@ import { CapacidadOperativaComponent } from '../core/capacidad-operativa/capacid
 import { DiaAcomulativoComponent } from '../core/dia-acomulativo/dia-acomulativo.component';
 import { PublicacionDeCitasComponent } from '../core/publicacion-de-citas/publicacion-de-citas.component';
 import { RegistroProgramacionCitasComponent } from '../core/registro-programacion-citas/registro-programacion-citas.component';
+import { LoginComponent } from '../shared/components/login/login.component';
 
 const routes: Routes = [
   // {
@@ -19,9 +20,13 @@ const routes: Routes = [
   //   path: 'sedes',
   //   component: SedesComponent
   // },
-
   {
     path: '',
+    component: LoginComponent,
+  },
+
+  {
+    path: 'home',
     component: HomeComponent,
     children: [
       {
